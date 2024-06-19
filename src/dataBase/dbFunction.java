@@ -21,9 +21,8 @@ public class dbFunction {
 				conn = DriverManager.getConnection(url, props);
 			} 
 			catch (SQLException e) {
-				throw new dbException(e.getMessage());
+				throw new dbException (e.getMessage());
 			}
-
 		}
 		return conn;
 	}
