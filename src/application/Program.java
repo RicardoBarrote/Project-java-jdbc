@@ -1,6 +1,5 @@
 package application;
 
-import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -32,11 +31,15 @@ public class Program {
 			System.out.println(sell);
 		}
 		
-		System.out.println("\n---Testando método Seller insert (Inserindo dados na tabela Seller)---");
+		/*System.out.println("\n---Testando método Seller insert (Inserindo dados na tabela Seller)---");
 		Seller newSeller = new Seller(null, "Matheus", "matheus@gmail.com", new Date(), 2000.0, dep);
 		sellerDao.insert(newSeller);
-		System.out.println("Inserido! novo ID = " + newSeller.getId());
+		System.out.println("Inserido! novo ID = " + newSeller.getId());*/
 		
+		System.out.println("\n---Testando método Seller Update (Atualizando dados na tabela Seller)---");
+		seller = sellerDao.findById(1);
+		seller.setName("Ricardo Barrote");
+		sellerDao.update(seller);
 	}
 
 }
